@@ -32,6 +32,14 @@ import static org.mockito.Mockito.verify;
         }
 
         @Test
+        void canGetAllStudents() {
+            // when
+            underTest.getAllStudents();
+
+            //then
+            verify(studentRepository).findAll();
+        }
+        @Test
         void canAddStudent() {
             // given
             Student student = new Student(
